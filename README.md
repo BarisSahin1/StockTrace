@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -21,4 +22,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* ....
+=======
+# StockTrace
+>>>>>>> 5b5ca34b67068636ec4e8e945566e2cbf59715e4
