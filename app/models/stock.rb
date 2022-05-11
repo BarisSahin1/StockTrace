@@ -7,8 +7,9 @@ class Stock < ApplicationRecord
 		  secret_token: 'secret_token',
 		  endpoint: 'https://cloud.iexapis.com/v1'
 		)
-		quote = client.quote(ticker_sym)
+		
 		begin 
+			quote = client.quote(ticker_sym)
 			new(ticker: ticker_sym,name: client.company(ticker_sym).company_name,last_price: quote.latest_price)
 		rescue => exception
 			return nil

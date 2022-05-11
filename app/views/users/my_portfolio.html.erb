@@ -10,17 +10,12 @@
       <div class="col-sm-3 no-left-padding">
         <%= button_tag type: :submit, class: "btn btn-success" do %>
           <%= 'Search' %>
+
         <% end %>
       </div>
     </div>
   <% end %>
 </div>
 
-<% if @stock %>
-	<div class="card card-header results-block">
-		<strong>Symbol:</strong> <%= @stock.ticker %>
-		<strong>Name:</strong> <%= @stock.name %>
-		<strong>Last Price:</strong> <%= @stock.last_price %>
-	</div>
-<% end %>
+<%= render 'users/result' %>
 
