@@ -14,12 +14,14 @@
 </head>
 <%= render 'shared/navigation' %>
  
-  <body>
+ <div  >
+   <body>
     <%= render 'layouts/messages' %>
-    <%= yield %>
-    <%= render 'shared/footer' %>
+    <%= yield %>   
   </body>
-
+ </div>
+  
+<%= render 'shared/footer' %>
 
 
 </html>

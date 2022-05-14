@@ -1,6 +1,12 @@
 <nav class="navbar navbar-expand-md navbar-light bg-dark sticky-top">
         <div class="container-fluid logocontainer">
-            <a href="#" class="navbar-brand"> <%= image_tag("logo.png") %></a>
+            
+            
+            <%# link_to  image_tag("logo.png") root_path,class:"navbar-brand"%>
+
+            <a href="" class="navbar-brand" style="font-size: 16px;">Finance <%= image_tag("logo.png") %> Tracker</a>
+
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -14,13 +20,15 @@
                         <%= link_to "About us",root_path%>
                     </li>
                     <li class="nav-item active">
-                        <%= link_to "Services",root_path%>
+                        <%= link_to "Log-Out",destroy_user_session_path,method: :delete%>
                     </li>
                     <li class="nav-item active">
-                        <%= link_to "Login",root_path%>
+                        <%= link_to "Log-in",new_user_session_path%>
                     </li>
+                    
+                </ul>  
 
-                </ul>           
+                       
             </div>
         </div>
     </nav>

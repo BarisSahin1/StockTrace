@@ -21,5 +21,12 @@ class Stock < ApplicationRecord
 		end
 	end
 
+	# method to check whether stock exist or not in db 
+
+
+	def self.check_db(ticker_sym)
+		where(ticker: ticker_sym).first
+	end
+	
 
 end
