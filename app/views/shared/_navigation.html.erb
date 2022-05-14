@@ -13,19 +13,48 @@
         
             <div class="collapse navbar-collapse navlinks" id="navbarResponsive" > 
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <%= link_to "Home",root_path,class:'active',id:'homelink'%>
-                    </li>
-                    <li class="nav-item active">
-                        <%= link_to "About us",root_path%>
-                    </li>
-                    <li class="nav-item active">
-                        <%= link_to "Log-Out",destroy_user_session_path,method: :delete%>
-                    </li>
-                    <li class="nav-item active">
-                        <%= link_to "Log-in",new_user_session_path%>
-                    </li>
                     
+                    <% if user_signed_in? %>
+
+                        <li class="nav-item active">
+                            <%= link_to "Home",root_path,class:'active',id:'homelink'%>
+                        </li>
+                        <li class="nav-item active">
+                            <%= link_to "About us",root_path%>
+                        </li>
+
+                        <li class="nav-item active">
+                            <%= link_to "Log-Out",destroy_user_session_path,method: :delete%>
+                        </li>
+                        
+                        <li class="nav-item active">
+                            <%= link_to edit_user_registration_path do %>
+                                <%= fa_icon 'edit ' %> Edit Profile
+                            <% end %>
+                        </li>
+
+                        <li class='nav-item user-name'>
+                            <%= fa_icon 'user' %> <%= current_user.full_name %>
+                        </li>
+
+                        
+                    <% elsif !user_signed_in? %> 
+                        <li class="nav-item active">
+                            <%= link_to "Home",root_path,class:'active',id:'homelink'%>
+                        </li>
+
+                         <li class="nav-item active">
+                            <%= link_to "About us",root_path%>
+                        </li>
+
+                        <li class="nav-item active">
+                            <%= link_to "Log-in",new_user_session_path%>
+                        </li>
+                        <li class='nav-item user-name'>
+                            <%= fa_icon 'user' %> <%= "Anonymous" %>
+                        </li>
+                    <% end %>
+
                 </ul>  
 
                        
