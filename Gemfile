@@ -30,7 +30,10 @@ gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-
+#gem for chart 
+gem "chartkick"
+#gem for groupdate
+gem "groupdate"
 #gem for stock apı
 gem 'iex-ruby-client'
 #gem for icons 

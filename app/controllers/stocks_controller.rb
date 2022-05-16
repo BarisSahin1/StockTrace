@@ -20,4 +20,15 @@ class StocksController < ApplicationController
       end
     end
   end
+
+  def edit
+    @stocks = Stock.all
+    @datesAndPricesArray = Stock.take_historical(params[:id])
+
+  end
+
+
+
+
+
 end
