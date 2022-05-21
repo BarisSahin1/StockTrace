@@ -1,5 +1,6 @@
 class StocksController < ApplicationController
 
+  # Params comes from form which exist in my_portfolio.html erb 
   def search
     if params[:stock].present?
       @stock = Stock.new_lookup(params[:stock])
@@ -21,10 +22,10 @@ class StocksController < ApplicationController
     end
   end
 
+
   def edit
     @stocks = Stock.all
     @datesAndPricesArray = Stock.take_historical(params[:id])
-
   end
 
 
